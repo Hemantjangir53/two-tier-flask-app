@@ -22,6 +22,16 @@ docker network inspect twotier
 //mage push to dockerhub
 
 =========
+
+
+![Screenshot from 2023-12-20 18-48-10](https://github.com/Hemantjangir53/two-tier-flask-app/assets/146804084/ac1d91e6-3079-43a8-8105-ad4941415a0b)
+
 docker-compose file create 
 
 dcoker-compose up -d   # automatically docker network create and both mysql and flask container connected
+
+==================
+
+
+
+
