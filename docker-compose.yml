@@ -11,7 +11,7 @@ services:
       MYSQL_USER: admin
       MYSQL_PASSWORD: admin
       MYSQL_DB: myDb
-    depends_on:
+    depends_on:       # when docker-compose run, first mysql container create then flask app. without this both database not connect
       - mysql
 
   mysql:
@@ -24,8 +24,8 @@ services:
       MYSQL_USER: admin
       MYSQL_PASSWORD: admin
     volumes:
-      - ./message.sql:/docker-entrypoint-initdb.d/message.sql   # Mount sql script into container's /docker-entrypoint-initdb.d directory to get table automatically created
+      - ./message.sql:/docker-entrypoint-initdb.d/message.sql  # Mount sql script into container's /docker-entrypoint-initdb.d directory to get table automatically created
       - mysql-data:/var/lib/mysql  # Mount the volume for MySQL data storage
 
-volumes:
-  mysql-data:
+volumes:          # volume is the entity that allow you store data from container
+  mysql-data:    # here the mysql-data create and above side assign (- mysql-data: )
