@@ -44,7 +44,8 @@ sudo apt install mysql-client -y
 
 mysql -h <endpoint address> -P <port.no> -u <username> -p
 
-eg .--> mysql -h my-mysql-db.cknvc5na3ufk.us-west-2.rds.amazonaws.com -P 3306 -u admin -p
+eg .--> mysql -h database-1.camicqvkpid1.us-east-1.rds.amazonaws.com -P 3306 -u admin -p
+
 ---
 SHOW DATABASES;
 
