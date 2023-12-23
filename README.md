@@ -1,4 +1,9 @@
+sudo apt install docker.io
+---
+sudo chown $USER /var/run/docker.sock
+
 docker . -t flaskapp
+--------------
 docker run -d -p 500:5000 flaskapp:latest
 
 ------------------------
@@ -30,6 +35,18 @@ dcoker-compose up -d   # automatically docker network create and both mysql and 
 
 ![Screenshot from 2023-12-20 18-48-10](https://github.com/Hemantjangir53/two-tier-flask-app/assets/146804084/ac1d91e6-3079-43a8-8105-ad4941415a0b)
 
+------------------------------------------
+connect to RDS and ec2 instance 
+--------------
+sudo apt update -y
+
+sudo apt install mysql-client -y
+
+mysql -h <endpoint address> -P <port.no> -u <username> -p
+
+eg .--> mysql -h my-mysql-db.cknvc5na3ufk.us-west-2.rds.amazonaws.com -P 3306 -u admin -p
+---
+SHOW DATABASES;
 
 
 
